@@ -28,6 +28,12 @@ INTRMDT_CRL_DP=''
 ROOT_OCSP=''
 INTRMDT_OCSP=''
 
+CONFIGPATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+CONFIGFILE=$( basename $0 )
+if [ -e ${CONFIGPATH}/${CONFIGFILE}.conf ]; then
+       . ${CONFIGPATH}/${CONFIGFILE}.conf
+fi
+
 #############
 # End Config
 #############
